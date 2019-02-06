@@ -1,7 +1,11 @@
 <div style="text-align:center">
   <mat-tab-group mat-align-tabs="center">
-    <mat-tab label="First"> Content 1 </mat-tab>
-    <mat-tab label="Second"> Content 2 </mat-tab>
-    <mat-tab label="Third"> Content 3 </mat-tab>
+    <li *ngFor="let item of someList">
+      <mat-tab  label="{{item.name}}">
+        <div class="tabContent">
+            {{item.url}}
+        </div>
+      </mat-tab>
+    </li>
   </mat-tab-group>
 </div>
